@@ -3,9 +3,13 @@
 
 int main(int argc, char const *argv[])
 {
-	CellPtr C = new Cell();
-	cout<<C->get_current()<<endl<<endl;
+	CellPtr c1 = new Cell();
+	cout<<c1<<endl;
 
+	CellPtr c2 = new Cell({'a', 'b', 'c'});
+	cout<<c2<<endl;
+
+	c2->clear();
 /*
 	CellPtr c = new Cell({'a', 'b', 'c'});
 	cout<<c->get_current()<<endl;
