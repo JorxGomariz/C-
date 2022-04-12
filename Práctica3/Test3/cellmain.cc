@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 	CellPtr c1 = new Cell();
 	cout<<c1<<endl;
 
-	CellPtr c2 = new Cell({'a', 'b', 'c'});
+	CellPtr c2 = new Cell({'a', 'b', 'c','d'});
 	cout<<c2<<endl;
 
 	c2->clear();
