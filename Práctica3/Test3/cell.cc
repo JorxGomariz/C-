@@ -1,11 +1,13 @@
 #include "cell.h"
 #include <ctime>
 #include <iostream>
+
 using namespace std;
 
 Cell::Cell(){
 	srand(unsigned(time(0)));
-	v.push_back(97 + rand() % (122-97));
+	this->v.push_back(97 + rand() % (122-97));
+	current = this->v[0];
 }
 
 Cell::~Cell(){
@@ -13,11 +15,13 @@ Cell::~Cell(){
 }
 
 Cell::Cell(const vector<char>& v){
-	//¿como igualo el vector parámetro al vector célula si se llaman igual?
+	this->v=v;
+	current = this->v[0];
 }
 
 void Cell::set_v(const vector<char>& v){
-	//¿tengo que limpiar antes el vector célula antes de cambiar el contenido?
+	this->v=v;
+	current = this->v[0];
 }
 
 char Cell::get_current(){
@@ -25,12 +29,18 @@ char Cell::get_current(){
 }
 
 void Cell::clear(){
-	int tam = v.size();
-	for (int i = 0; i < tam; ++i){
-		v.pop_back();
-	}
+	vector<char> v(1,' ');
+	this->v=v;
 }
 
 void Cell::next(){
-	//no entiendo esta función
+	char actual = current;
+	for (size_t i = 2; i <= this->v.size(); ++i){
+		if (actual == this->v[this->v.size()-i]){
+			current = this->v[this->v.size()-i+1];
+		}
+		else if (actual == this->v[this->v.size()-1]){
+			current = this->v[0];
+		}
+	}
 }

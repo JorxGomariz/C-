@@ -3,7 +3,7 @@
 Board::Board(uint32_t r, uint32_t c, char bg = '.'){
 	rows = r;
 	cols = c;
-	//¿qué hago con bg?
+	this->bg=bg; 
 }
 
 Board::~Board(){
@@ -18,10 +18,14 @@ void Board::clear_column (uint32_t c){
 	c->clear();
 }
 
-uint32_t Board::uint32_t get_nrows(){
+uint32_t Board::get_nrows(){
 	return rows;
 }
 
-uint32_t Board::uint32_t get_ncols(){
+uint32_t Board::get_ncols(){
 	return cols;
+}
+
+void Board::set_cell_at (CellPtr c, uint32_t row, uint32_t col){
+	
 }
