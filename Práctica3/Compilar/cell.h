@@ -1,5 +1,3 @@
-// NIF: 46088497-Q
-// NOMBRE: GOMARIZ VELASCO, JORGE
 // -*- mode:c++; -*-
 #ifndef CELL_H
 #define CELL_H
@@ -27,6 +25,7 @@ public:
   void clear();
   char get_current();
   void next();
+
 
   // Signals //------------------------------------------------------------
   boost::signals2::signal<void (CellPtr)> nextCalled;

@@ -1,5 +1,3 @@
-// NIF: 46088497-Q
-// NOMBRE: GOMARIZ VELASCO, JORGE
 // -*- mode:c++; -*-
 #ifndef BOARD_H
 #define BOARD_H
@@ -37,6 +35,7 @@ public:
     uint32_t get_nrows();
     uint32_t get_ncols();
 
+/*
     // Signals //------------------------------------------------------------
     boost::signals2::signal<void (BoardPtr)> cellsUpdated;
     boost::signals2::signal<void (BoardPtr, const string& b)> boardDrawn;
@@ -45,6 +44,7 @@ public:
     boost::signals2::signal<void (BoardPtr b, uint32_t row, uint32_t col, uint32_t w, uint32_t h)> rectangleInserted;
     boost::signals2::signal<void (BoardPtr b, uint32_t row, uint32_t col, uint32_t w, uint32_t h)> rectangleNotInserted;
     //-----------------------------------------------------------------------
+*/
 private:
     bool cell_exists(const CellPtr c);
     vector<vector<CellPtr>> cv;
